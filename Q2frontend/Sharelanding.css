@@ -63,3 +63,12 @@ h1 {
   color: white;
   font-weight: 500;
 }
+
+.post-button {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin: 20px;
+  padding: 15px;
+} 
