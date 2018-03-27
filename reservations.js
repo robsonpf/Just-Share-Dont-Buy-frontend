@@ -3,13 +3,39 @@
 // loop through result
 // output a piece of DOM for each reservation
 
+const baseURL = 'http://localhost:3000/item'
 
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
+document.addEventListener('DOMContentLoaded', () => {
+  createItem()
 })
+
+const createItem () => {
+  axios.post(`${baseURL}`, {
+    "category_id":3,
+    "user_id":3,
+    "description":"Bla Bla Bla",
+    "name":"My Item"
+  })
+}.then(result => {
+  console.log(result);
+})
+.catch(error => {
+  console.log(error)
+})
+}
+
+//
+// function createItem() {
+//   $.post(`http://localhost:3000/item`, {
+//     "category_id":3,
+//     "user_id":3,
+//     "description":"Bla Bla Bla",
+//     "name":"My Item"
+//   })
+//     .then(result => {
+//       console.log(result);
+//     })
+//     .catch(error => {
+//       console.log(error)
+//     })
+// }
