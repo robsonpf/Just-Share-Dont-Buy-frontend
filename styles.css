@@ -10,11 +10,10 @@
   margin: 20px !important;
 }
 
-h1 {
+h1.inner-text {
   text-align: center;
   font-size: 60px;
   margin: 30px auto;
-  color: blue;
 }
 
 .share-pic {
@@ -51,24 +50,15 @@ h1 {
 }
 
 .button {
-    background-color: blue;
-    text-align: center;
-    font-size: 20px;
-    margin: 0px;
-    width: 200px;
-    height: 100px;
+  background-color: blue;
+  text-align: center;
+  font-size: 20px;
+  margin: 0px;
+  width: 200px;
+  height: 100px;
 }
 
 .a-tag {
   color: white;
   font-weight: 500;
-}
-
-.post-button {
-  background-color: red;
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  margin: 20px;
-  padding: 15px;
 }
