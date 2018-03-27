@@ -1,0 +1,74 @@
+.container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 20px 20px;
+  margin-top: 40px;
+}
+
+.row {
+  padding: 30px 30px;
+  margin: 20px !important;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin: 30px auto;
+  color: blue;
+}
+
+.share-pic {
+  text-align: center;
+}
+
+.nobuy-pic {
+  margin: 10px auto;
+  max-width: 80%;
+}
+
+.inner-text {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 55px;
+  color: white;
+  border: 1px white;
+  background: blue;
+}
+
+.share-navbar {
+  background-color: blue;
+}
+
+.information {
+  font-size: 35px;
+}
+
+.nav-link {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.button {
+    background-color: blue;
+    text-align: center;
+    font-size: 20px;
+    margin: 0px;
+    width: 200px;
+    height: 100px;
+}
+
+.a-tag {
+  color: white;
+  font-weight: 500;
+}
+
+.post-button {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin: 20px;
+  padding: 15px;
+}
