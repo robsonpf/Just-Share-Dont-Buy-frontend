@@ -5,8 +5,10 @@
 
 const baseURL = 'http://localhost:3000/item'
 
+
 document.addEventListener('DOMContentLoaded', () => {
   createItem()
+  
 })
 
 const createItem () => {
