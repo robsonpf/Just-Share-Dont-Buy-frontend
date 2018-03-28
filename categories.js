@@ -4,7 +4,7 @@ $( document ).ready(() => {
     .then(response => {
       console.log(response);
       const category = response.data
-      $('#category-title').html('Category: ' + category.name)
+      $('#category-title').html(category.name)
     })
     .catch(error => {
       console.log(error);

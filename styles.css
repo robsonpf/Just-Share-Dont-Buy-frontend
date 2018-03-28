@@ -62,3 +62,8 @@ h1.inner-text {
   color: white;
   font-weight: 500;
 }
+
+.a-tag:hover {
+  color: lightblue;
+  text-decoration: none;
+}
