@@ -15,9 +15,8 @@ $( document ).ready(() => {
       console.log(response);
       const items = response.data;
       items.forEach(item => {
-        $('#items').append(`<p><b>${item.name}</b></p>`)
-        $('#items').append(`<p>${item.description}</p>`)
-      })
+        $('#items').append(`<button type="button"><p><b><u>${item.name}</b></u> <br> ${item.description}</p></button>`)
+        })
     })
     .catch(error => {
       console.log(error);
