@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-     <title>The Category of your Choice</title>
+     <title>Item Selected</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -80,8 +80,19 @@
       </div>
     </nav>
     <div class="container">
-      <h1 id="category-title">Category</h1>
-      <div id="items"></div>
+      <h1 id="item-title"></h1>
+      <a href="https://placeholder.com"><img src="http://via.placeholder.com/600x300"></a>
+      <h3>Description</h3>
+      <p id="item-description"></p>
+      <h3>Contact Information</h3>
+      <p>
+        <span id="user-name"></span> ||
+        <span id="user-phone"></span> ||
+        <span id="user-email"></span>
+      </p>
+      <p><b>
+        <span> Date Posted:</span><span id="when-avail"> Availability: </span>
+      </b></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
@@ -89,6 +100,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="posts.js" charset="utf-8"></script>
-    <script src="categories.js" charset="utf-8"></script>
+    <script src="item.js" charset="utf-8"></script>
   </body>
 </html>
