@@ -16,6 +16,10 @@ h1.inner-text {
   margin: 30px auto;
 }
 
+h3 {
+  color: blue;
+}
+
 .share-pic {
   text-align: center;
 }
@@ -64,7 +68,7 @@ h1.inner-text {
 }
 
 .a-tag:hover {
-  color: lightblue;
+  color: darkblue;
   text-decoration: none;
 }
 
@@ -72,7 +76,28 @@ h1.inner-text {
   padding: 25px;
 }
 
-p {
-  width: 900px;
+a.btn {
+  appearance: button;
+  background-color: white;
+  border: 1px solid black;
+  color: initial;
+  margin: 1px;
   padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  white-space: normal;
 }
+
+a.btn:hover {
+  background-color: lightskyblue;
+}
+
+a.btn:active {
+  background-color: lightblue;
+}
+
+#when-avail {
+  margin-left: 200px;
+}
+
+
