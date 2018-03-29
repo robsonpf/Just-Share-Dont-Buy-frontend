@@ -1,3 +1,18 @@
+const baseURL = 'http://localhost'
+
+document.addEventListener('DOMContentLoaded', () => {
+  addPost()
+})
+document.getElementById("#share-button").addEventListener('click', (event) => {
+
+})
+axios.all([
+
+])
+
+
+
+
 // when the dom loads
 // make an ajax request with axios to get all reservations
 // loop through result
