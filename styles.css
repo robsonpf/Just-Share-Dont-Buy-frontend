@@ -6,8 +6,8 @@
 }
 
 .row {
-  padding: 30px 30px;
-  margin: 20px !important;
+  padding: 20px 20px;
+  margin: 10px !important;
 }
 
 h1.inner-text {
@@ -40,7 +40,7 @@ h1.inner-text {
 }
 
 .information {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .nav-link {
@@ -68,3 +68,11 @@ h1.inner-text {
   text-decoration: none;
 }
 
+#category-title {
+  padding: 25px;
+}
+
+p {
+  width: 900px;
+  padding: 20px;
+}
