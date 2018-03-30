@@ -28,7 +28,10 @@ $( document ).ready(() => {
       console.log(response);
       const items = response.data;
       items.forEach(item => {
-        $('#items').append(`<a href="/item.html?item=${item.id}" class="btn"><b><u>${item.name}</b></u> <br> ${item.description}</a>`)
+        console.log('item ===== ', item);
+        if (!item.reserved) {
+          $('#items').append(`<a href="/item.html?item=${item.id}" class="btn"><b><u>${item.name}</b></u> <br> ${item.description}</a>`)
+        }
       })
     })
     .catch(error => {
