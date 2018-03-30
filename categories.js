@@ -1,4 +1,17 @@
-let category = $.url('?category');
+
+getUrlVars = () => {
+  let vars = [], hash;
+  let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  hashes.forEach((hash, idx) => {
+    hash = hashes[idx].split('=');
+    vars.push(hash[0]);
+    vars[hash[0]] = hash[1];
+  })
+  return vars;
+}
+
+let category = getUrlVars()["category"];
+console.log(category)
 $( document ).ready(() => {
   axios.get(`/categories/${category}`)
     .then(response => {
@@ -22,35 +35,3 @@ $( document ).ready(() => {
       console.log(error);
     });
 });
-
-// const baseURL = 'http://localhost:3000'
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//   axios.all([
-//     axios.get(`${baseURL}/items`),
-//     axios.get(`${baseURL}/users`),
-//     axios.get(`${baseURL}/categories`)
-//   ])
-//   .then(axios.spread((items, users, categories) => {
-//     console.log(items.data);
-//     console.log(users.data);
-//     console.log(categories.data);
-//
-//
-//     let categoryItems = []
-//
-//     let categoryHeaderArray = document.querySelectorAll('.category')
-//     categoryHeaderArray.forEach(category => {
-//       console.log('CATEGORY === ', category.id);
-//
-//       categoryItems.push(items.data.filter(item => item.category_id === Number(category.id)))
-//       console.log(categoryItems);
-//
-//     })
-//   }))
-// })
-//
-//
-// loadData = () => {
-//
-// }

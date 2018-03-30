@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(result => {
         console.log(result);
+        document.location = '/category.html?category=' + categoryId;
     })
     .catch(error => {
       console.log(error);
