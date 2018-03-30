@@ -36,11 +36,11 @@ h3 {
   font-size: 55px;
   color: white;
   border: 1px white;
-  background: blue;
+  background: darkblue;
 }
 
 .share-navbar {
-  background-color: blue;
+  background-color: darkblue;
 }
 
 .information {
@@ -54,7 +54,7 @@ h3 {
 }
 
 .button {
-  background-color: blue;
+  background-color: darkblue;
   text-align: center;
   font-size: 20px;
   margin: 0px;
@@ -68,7 +68,7 @@ h3 {
 }
 
 .a-tag:hover {
-  color: darkblue;
+  color: red;
   text-decoration: none;
 }
 
@@ -96,7 +96,7 @@ a.btn:active {
   background-color: lightblue;
 }
 
-#when-avail {
+#availability {
   margin-left: 200px;
 }
 
