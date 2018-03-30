@@ -24,3 +24,15 @@ $( document ).ready(() => {
       console.log(error);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("reservation_button").addEventListener('click', (event) => {
+    axios.patch(`/items/${item}`, {})
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  })
+})

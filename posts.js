@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "name": itemName
       })
       .then(result => {
-        console.log(result);
+        console.log('THIS IS MY RESULT ==== ', result);
         document.location = '/category.html?category=' + categoryId;
     })
     .catch(error => {
