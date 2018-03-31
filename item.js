@@ -10,6 +10,8 @@ $( document ).ready(() => {
       const item = response.data
       $('#item-title').html(item.name)
       $('#item-description').html(item.description)
+      $('#date').html(new Date(item.created_at));
+      $('#availability').html(item.reserved ? "Not Available" : "Available")
       axios.get(`/users/${item.user_id}`)
         .then(response => {
           const user = response.data
@@ -22,3 +24,20 @@ $( document ).ready(() => {
       console.log(error);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("reservation_button").addEventListener('click', (event) => {
+
+    // $('.alert').alert()
+
+    axios.patch(`/items/${item}`, {
+      "reserved":true
+    })
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  })
+})
