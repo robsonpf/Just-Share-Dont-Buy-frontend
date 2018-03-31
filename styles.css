@@ -1,8 +1,8 @@
-.container {
+.site-container {
   max-width: 1000px;
   margin: 0px auto;
   padding: 20px 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .row {
@@ -59,7 +59,9 @@ h3 {
   font-size: 20px;
   margin: 0px;
   width: 200px;
-  height: 100px;
+  height: 125px;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 .a-tag {
@@ -68,12 +70,31 @@ h3 {
 }
 
 .a-tag:hover {
-  color: red;
+  color: blue;
   text-decoration: none;
+}
+
+.a-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  background: skyblue;
 }
 
 #category-title {
   padding: 25px;
+}
+
+.category-item-card {
+  min-width: 18rem;
+  max-width: 18rem;
 }
 
 a.btn {
@@ -98,6 +119,15 @@ a.btn:active {
 
 #availability {
   margin-left: 200px;
+  border: 1px solid black;
+  padding: 10px;
 }
 
-
+.logo {
+  padding-left: 250px;
+  color: white;
+  text-shadow: 1px 2px dodgerblue;
+  font-size: 20px;
+  margin-top: -84px;
+  margin-bottom: -80px;
+}
