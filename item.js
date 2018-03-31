@@ -27,9 +27,11 @@ $( document ).ready(() => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("reservation_button").addEventListener('click', (event) => {
-    axios.patch(`/items/${item}`, {})
+    axios.patch(`/items/${item}`, {
+      "reserved":true
+    })
       .then(result => {
-        console.log(result);
+        console.log("result ===>>>>>",result);
       })
       .catch(error => {
         console.log(error);
