@@ -30,7 +30,17 @@ $( document ).ready(() => {
       items.forEach(item => {
         console.log('item ===== ', item);
         if (!item.reserved) {
-          $('#items').append(`<a href="/item.html?item=${item.id}" class="btn"><b><u>${item.name}</b></u> <br> ${item.description}</a>`)
+          $('.card-deck').append(`
+            <div class="card category-item-card mb-4">
+              <a class="a-card" href="/item.html?item=${item.id}">
+                <img class="card-img-top" src="http://via.placeholder.com/259x200">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">${item.description}</p>
+                </div>
+              </a>
+            </div>
+          `);
         }
       })
     })
