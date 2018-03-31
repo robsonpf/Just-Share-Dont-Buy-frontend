@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemName = document.querySelector("#Items-name").value
     const description = document.querySelector("#Items-description").value
     const userId = 1
-    const selector = document.querySelector("#Category")
-    const categoryId = selector.options[ selector.selectedIndex ].value
-
+    const selector = document.querySelector("#Category");
+    const categoryId = selector.options[selector.selectedIndex].value
+    const photo = document.querySelector("#Items-photo").value
     // if(!validateAllForms()) {
     //     alert('form data invalid');
     //     return;
@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "category_id": categoryId,
         "user_id": 1,
         "description": description,
-        "name": itemName
+        "name": itemName,
+        "photo": photo
       })
       .then(result => {
         console.log('THIS IS MY RESULT ==== ', result);
