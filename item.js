@@ -10,6 +10,7 @@ $( document ).ready(() => {
       const item = response.data
       $('#item-title').html(item.name)
       $('#item-description').html(item.description)
+      $('#item-image').html(`<img src="${item.photo}" />`)
       $('#date').html(new Date(item.created_at));
       $('#availability').html(item.reserved ? "Not Available" : "Available")
       axios.get(`/users/${item.user_id}`)

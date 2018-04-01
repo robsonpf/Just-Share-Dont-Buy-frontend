@@ -33,7 +33,9 @@ $(document).ready(() => {
           $('.card-deck').append(`
             <div class="card category-item-card mb-4">
               <a class="a-card" href="/item.html?item=${item.id}">
+
                 <img class="card-img-top" src="${item.photo}" width="286" height="195">
+
                 <div class="card-body">
                   <h5 class="card-title">${item.name}</h5>
                   <p class="card-text">${item.description}</p>
