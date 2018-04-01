@@ -1,6 +1,6 @@
-
 getUrlVars = () => {
-  let vars = [], hash;
+  let vars = [],
+    hash;
   let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
   hashes.forEach((hash, idx) => {
     hash = hashes[idx].split('=');
@@ -12,7 +12,7 @@ getUrlVars = () => {
 
 let category = getUrlVars()["category"];
 console.log(category)
-$( document ).ready(() => {
+$(document).ready(() => {
   axios.get(`/categories/${category}`)
     .then(response => {
       console.log(response);
@@ -33,7 +33,7 @@ $( document ).ready(() => {
           $('.card-deck').append(`
             <div class="card category-item-card mb-4">
               <a class="a-card" href="/item.html?item=${item.id}">
-                <img class="card-img-top" src="http://via.placeholder.com/259x200">
+                <img class="card-img-top" src="${item.photo}" width="286" height="195">
                 <div class="card-body">
                   <h5 class="card-title">${item.name}</h5>
                   <p class="card-text">${item.description}</p>
