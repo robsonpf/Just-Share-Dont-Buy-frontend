@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const selector = document.querySelector("#Category");
     const categoryId = selector.options[selector.selectedIndex].value
     const photo = document.querySelector("#Items-photo").value
-    // if(!validateAllForms()) {
-    //     alert('form data invalid');
-    //     return;
-    //   }
+    if(!validateAllForms()) {
+        alert('form data invalid');
+        return;
+      }
 
     axios.post(`/items`, {
         "category_id": categoryId,
@@ -30,16 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-// validateAllForms = () => {
-//   var isValid = true;
-//   const itemName = document.querySelector("#Items-name").value
-//   const description = document.querySelector("#Items-description").value
-//   const selector = document.querySelector("#Category")
-//   const categoryId = selector.options[ selector.selectedIndex ].value
-//
-//   if (itemName === null || itemName === undefined || itemName === "") return false
-//   if (description  === null || description  === undefined || description  === "") return false
-//   if (categotyId === null || categotyId === undefined || categotyId === "") return false
-//
-//   return isValid
-// }
+validateAllForms = () => {
+  var isValid = true;
+  const itemName = document.querySelector("#Items-name").value
+  const description = document.querySelector("#Items-description").value
+  const selector = document.querySelector("#Category")
+  const categoryId = selector.options[ selector.selectedIndex ].value
+  const photo = document.querySelector("#Items-photo").value
+  if (itemName === null || itemName === undefined || itemName === "") return false
+  if (description  === null || description  === undefined || description  === "") return false
+  if (categoryId === null || categoryId === undefined || categoryId === "") return false
+  if (photo === null || photo === undefined || photo === "") return false
+  return isValid
+}
