@@ -15,6 +15,14 @@ body {
   z-index: 10;
 }
 
+h1 {
+  color: crimson;
+}
+
+p {
+  color: lightcyan;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
