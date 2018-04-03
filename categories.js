@@ -1,3 +1,5 @@
+const baseURL = `http://localhost:3000`
+
 getUrlVars = () => {
   let vars = [],
     hash;
@@ -11,9 +13,9 @@ getUrlVars = () => {
 }
 
 let category = getUrlVars()["category"];
-console.log(category)
+console.log('what is this === ', category)
 $(document).ready(() => {
-  axios.get(`/categories/${category}`)
+  axios.get(`${baseURL}/categories/${category}`)
     .then(response => {
       console.log(response);
       const category = response.data
@@ -23,16 +25,18 @@ $(document).ready(() => {
       console.log(error);
     });
 
-  axios.get(`/categories/${category}/items`)
+  axios.get(`${baseURL}/categories/${category}/items`)
     .then(response => {
       console.log(response);
       const items = response.data;
       items.forEach(item => {
         console.log('item ===== ', item);
+        console.log(window.location.href);
+        let url = window.location.href.split("/category.html?")[0]
         if (!item.reserved) {
           $('.card-deck').append(`
             <div class="card category-item-card mb-4">
-              <a class="a-card" href="/item.html?item=${item.id}">
+              <a class="a-card" href="${url}/item.html?item=${item.id}">
 
                 <img class="card-img-top" src="${item.photo}" width="286" height="195">
 

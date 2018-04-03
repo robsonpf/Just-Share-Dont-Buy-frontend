@@ -1,3 +1,5 @@
+const baseUrl = `http://localhost:3000`
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("share-button").addEventListener('click', (event) => {
     const itemName = document.querySelector("#Items-name").value
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-    axios.post(`/items`, {
+    axios.post(`${baseURL}/items`, {
         "category_id": categoryId,
         "user_id": 1,
         "description": description,

@@ -1,10 +1,12 @@
+const baseURL = `http://localhost:3000`
+
 // Read the item ID from the URL
 let item = $.url('?item');
 
 // When the page loads
 $( document ).ready(() => {
   // Make a GET request for the item
-  axios.get(`/items/${item}`)
+  axios.get(`${baseURL}/items/${item}`)
     .then(response => {
       console.log(response);
       const item = response.data
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // $('.alert').alert()
 
-    axios.patch(`/items/${item}`, {
+    axios.patch(`${baseURL}/items/${item}`, {
       "reserved":true
     })
       .then(result => {
