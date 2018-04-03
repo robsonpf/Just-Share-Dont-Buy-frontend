@@ -1,4 +1,5 @@
-const baseUrl = `http://localhost:3000`
+const baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
+
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("share-button").addEventListener('click', (event) => {
@@ -13,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-    axios.post(`${baseURL}/items`, {
+
+    axios.post(`${baseUrl}/items`, {
+
         "category_id": categoryId,
         "user_id": 1,
         "description": description,

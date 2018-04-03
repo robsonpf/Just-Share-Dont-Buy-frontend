@@ -1,4 +1,4 @@
-const baseURL = `http://localhost:3000`
+const baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
 
 getUrlVars = () => {
   let vars = [],
@@ -15,7 +15,9 @@ getUrlVars = () => {
 let category = getUrlVars()["category"];
 console.log('what is this === ', category)
 $(document).ready(() => {
-  axios.get(`${baseURL}/categories/${category}`)
+
+  axios.get(`${baseUrl}/categories/${category}`)
+
     .then(response => {
       console.log(response);
       const category = response.data
@@ -25,7 +27,9 @@ $(document).ready(() => {
       console.log(error);
     });
 
-  axios.get(`${baseURL}/categories/${category}/items`)
+
+  axios.get(`${baseUrl}/categories/${category}/items`)
+
     .then(response => {
       console.log(response);
       const items = response.data;
