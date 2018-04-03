@@ -1,5 +1,6 @@
 const baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
 
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("share-button").addEventListener('click', (event) => {
     const itemName = document.querySelector("#Items-name").value
@@ -13,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+
     axios.post(`${baseUrl}/items`, {
+
         "category_id": categoryId,
         "user_id": 1,
         "description": description,

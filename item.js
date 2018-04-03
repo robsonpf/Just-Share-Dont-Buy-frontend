@@ -1,12 +1,15 @@
 const baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
 
+
 // Read the item ID from the URL
 let item = $.url('?item');
 
 // When the page loads
 $( document ).ready(() => {
   // Make a GET request for the item
+
   axios.get(`${baseUrl}/items/${item}`)
+
     .then(response => {
       console.log(response);
       const item = response.data
@@ -33,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // $('.alert').alert()
 
+
     axios.patch(`${baseUrl}/items/${item}`, {
+
       "reserved":true
     })
       .then(result => {
