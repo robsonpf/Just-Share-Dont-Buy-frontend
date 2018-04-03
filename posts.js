@@ -1,6 +1,5 @@
 const baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
-
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("share-button").addEventListener('click', (event) => {
     const itemName = document.querySelector("#Items-name").value
