@@ -1,28 +1,33 @@
 <html>
   <head>
-    <meta charset="utf-8">
-     <title>Sharing is Caring</title>
+    <title>Sharing is Caring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   </head>
   <body>
   <nav class="navbar navbar-expand-lg share-navbar">
-    <a class="nav-link" href="#">Sign Up</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+    <img class="logo" src="https://tmpfilecdn.freelogodesign.org/afb4bed7-1d45-405d-9aa2-86a1d66d4532.png">
+    <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Sign Up<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
       </ul>
       <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
-      <img class="logo" src="https://tmpfilecdn.freelogodesign.org/d6134e18-b636-4580-b38f-c2ed462171c3.png">
       <div class="modal fade" id="postingModal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
         <form>
           <div class="modal-dialog" role="document">
@@ -133,29 +138,46 @@
     </a>
   </div> <!-- myCarousel -->
     <div class="site-container">
-      <div class="row">
-        <div class="col-3 text-center">
-            <button id="button" class="button">
-              <a class="a-tag" href="category.html?category=1">SPACE</a>
-            </button>
-        </div>
-        <div class="col-3 text-center">
-          <button id="button" class="button">
-            <a class="a-tag" href="category.html?category=2">HOUSEHOLD ITEMS</a>
-          </button>
-        </div>
-        <div class="col-3 text-center">
-          <button id="button" class="button">
-            <a class="a-tag" href="category.html?category=3">SPORTING GOODS</a>
-          </button>
-        </div>
-        <div class="col-3 text-center">
-          <button id="button" class="button">
+      <div class="category-boxes">
+        <button class="button">
+          <a class="a-tag" href="category.html?category=1">SPACE</a>
+        </button>
+        <button class="button">
+          <a class="a-tag" href="category.html?category=2">HOUSEHOLD ITEMS</a>
+        </button>
+        <button class="button">
+          <a class="a-tag" href="category.html?category=3">SPORTING GOODS</a>
+        </button>
+        <button class="button">
           <a class="a-tag" href="category.html?category=4">MISCELLANEOUS</a>
-          </button>
-        </div>
+        </button>
       </div>
     </div>
+    <footer class="footer-distributed">
+
+      <div class="footer-right">
+
+        <a href="#"><i class="mt-7 fa fa-facebook"></i></a>
+        <a href="#"><i class="mt-7 fa fa-twitter"></i></a>
+        <a href="#"><i class="mt-7 fa fa-linkedin"></i></a>
+        <a href="#"><i class="mt-7 fa fa-github"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="#">Contact Information</a>
+          ·
+          <a href="#">Blog</a>
+          ·
+          <a href="#">FAQ</a>
+        </p>
+
+        <p>Just Share Don't Buy &copy; 2018</p>
+      </div>
+
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
