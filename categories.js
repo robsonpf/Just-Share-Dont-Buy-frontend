@@ -19,7 +19,7 @@ $(document).ready(() => {
   axios.get(`${baseUrl}/categories/${category}`)
 
     .then(response => {
-      console.log(response);
+      console.log('hello');
       const category = response.data
       $('#category-title').html(category.name)
     })

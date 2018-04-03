@@ -5,7 +5,7 @@ const baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
 let item = $.url('?item');
 
 // When the page loads
-$( document ).ready(() => {
+$(document).ready(() => {
   // Make a GET request for the item
 
   axios.get(`${baseUrl}/items/${item}`)
@@ -15,7 +15,7 @@ $( document ).ready(() => {
       const item = response.data
       $('#item-title').html(item.name)
       $('#item-description').html(item.description)
-      $('#item-image').html(`<img src="${item.photo}" />`)
+      $('#item-image').html(`<img src="${item.photo}" height=300 width=425 />`)
       $('#date').html(new Date(item.created_at));
       $('#availability').html(item.reserved ? "Not Available" : "Available")
       axios.get(`${baseUrl}/users/${item.user_id}`)
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     axios.patch(`${baseUrl}/items/${item}`, {
 
-      "reserved":true
-    })
+        "reserved": true
+      })
       .then(result => {
         console.log(result);
       })
