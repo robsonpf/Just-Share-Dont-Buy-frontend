@@ -48,7 +48,6 @@ h3 {
 }
 
 .nav-link {
-  text-align: center;
   color: white;
   font-weight: 500;
 }
@@ -57,10 +56,10 @@ h3 {
   background-color: darkblue;
   text-align: center;
   font-size: 20px;
-  margin: 0px;
+  margin: 5px;
   width: 200px;
   height: 125px;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid black;
 }
 
@@ -124,12 +123,28 @@ a.btn:active {
 }
 
 .logo {
-  padding-left: 250px;
   color: white;
   text-shadow: 1px 2px dodgerblue;
   font-size: 20px;
   margin-top: -84px;
   margin-bottom: -80px;
+}
+
+.category-boxes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 54rem) {
+  .category-boxes {
+    flex-direction: row;
+  }
+
+  .button {
+    margin: 0px;
+  }
 }
 
 /* #bgImg1 {
