@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // $('.alert').alert()
 
-
     axios.patch(`${baseUrl}/items/${item}`, {
 
         "reserved": true
