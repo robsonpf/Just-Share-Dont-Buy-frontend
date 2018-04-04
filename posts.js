@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-      console.log("Hello");
+
       axios.post(`${baseUrl}/items`, {
 
         "category_id": categoryId,
