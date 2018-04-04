@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    console.log("Hello");
-    axios.post(`${baseUrl}/items`, {
+      console.log("Hello");
+      axios.post(`${baseUrl}/items`, {
 
         "category_id": categoryId,
         "user_id": 1,
@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
         console.log(error);
       })
-    document.location = $('#category-title').html(category.name);
+      document.location = $('#category-title').html(category.name);
+    })
   })
-})
 
 
 validateAllForms = () => {
