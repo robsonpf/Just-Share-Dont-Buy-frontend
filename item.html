@@ -26,7 +26,7 @@
           <a class="nav-link" href="/">Home</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
+      <button id="reservation_button" type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
       <div class="modal fade" id="postingModal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
         <form>
           <div class="modal-dialog" role="document">
@@ -100,7 +100,26 @@
       <p><b>
         Date Posted: <span id="date"></span><span id="availability"></span>
       </b></p>
-      <button id="reservation_button" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Book</button>
+
+      <button id="book" type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#reservation-modal" data-whatever="Reserve">Book</button>
+      <div class="modal fade" id="reservation-modal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
+        <form>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"  id="reserveItemModal">Successful Reservation!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <!-- <img class="modal-content" id="img01" -->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </form>
+      <!-- send confirmation pop up with image of item -->
     </div>
     <!-- <div class="alert alert-success" role="alert">
       <h4 class="alert-heading">Rules of Borrowing</h4>
