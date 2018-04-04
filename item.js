@@ -1,6 +1,5 @@
 const baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
-
 // Read the item ID from the URL
 let item = $.url('?item');
 
@@ -47,4 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(error);
       })
   })
+
 })
+
+////////////////////

@@ -1,6 +1,5 @@
 const baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
-
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("share-button").addEventListener('click', (event) => {
     const itemName = document.querySelector("#Items-name").value
@@ -14,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-
-    axios.post(`${baseUrl}/items`, {
+      console.log("Hello");
+      axios.post(`${baseUrl}/items`, {
 
         "category_id": categoryId,
         "user_id": 1,
@@ -30,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
         console.log(error);
       })
-    document.location = $('#category-title').html(category.name);
+      document.location = $('#category-title').html(category.name);
+    })
   })
-})
 
 
 validateAllForms = () => {

@@ -23,10 +23,10 @@
           <a class="nav-link" href="/">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
+      <button id="reservation_button" type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
       <div class="modal fade" id="postingModal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
         <form>
           <div class="modal-dialog" role="document">
@@ -102,25 +102,25 @@
       </b></p>
 
 
-      <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#reservation-modal" data-whatever="Reserve">Book</button>
+      <button id="book" type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#reservation-modal" data-whatever="Reserve">Book</button>
       <div class="modal fade" id="reservation-modal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
-       <form>
-         <div class="modal-dialog" role="document">
-           <div class="modal-content">
-             <div class="modal-header">
-               <h5 class="modal-title"  id="reserveItemModal">Successful Reservation!</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
-             </div>
-             <div class="modal-body">
-                 <!-- <img class="modal-content" id="img01" -->
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-           </div>
-         </div>
-       </div>
-      </form>
-    </div>
+        <form>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"  id="reserveItemModal">Successful Reservation!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <!-- <img class="modal-content" id="img01" -->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </form>
+      <!-- send confirmation pop up with image of item -->
     </div>
     <!-- <div class="alert alert-success" role="alert">
       <h4 class="alert-heading">Rules of Borrowing</h4>
@@ -160,7 +160,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="posts.js" charset="utf-8"></script> -->
+    <!-- <script src="src/posts.js " charset="utf-8"></script> -->
     <script src="item.js" charset="utf-8"></script>
   </body>
 </html>
