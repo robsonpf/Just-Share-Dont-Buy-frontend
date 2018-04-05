@@ -13,9 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-
-      axios.post(`${baseUrl}/items`, {
-
+    axios.post(`${baseUrl}/items`, {
         "category_id": categoryId,
         "user_id": 1,
         "description": description,
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "photo": photo
       })
       .then(result => {
-        console.log('THIS IS MY RESULT ==== ', result);
         document.location = '/category.html?category=' + categoryId;
       })
       .catch(error => {
