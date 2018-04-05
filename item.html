@@ -1,12 +1,18 @@
 <html>
   <head>
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <title>Item Selected</title>
+    <title>Item Selected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/item-page.js" type="module"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg share-navbar">
@@ -26,7 +32,7 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>
       </ul>
-      <button id="reservation_button" type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
+      <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#postingModal" data-whatever="Post">Share an Item</button>
       <div class="modal fade" id="postingModal" tabindex="-1" role="dialog" aria-labelledby="postingLabel" aria-hidden="true">
         <form>
           <div class="modal-dialog" role="document">
@@ -38,25 +44,13 @@
                 </button>
               </div>
               <div class="modal-body">
-                <!-- <div class="form-group">
-                  <label for="usernameInput" class="col-form-label">Name:</label>
-                  <input type="text" class="form-control" id="usernameInput">
-                </div>
-                <div class="form-group">
-                  <label for="phoneNumberInput" class="col-form-label">Phone Number:</label>
-                  <input type="phone" class="form-control" id="phoneNumberInput" pattern= "^(([2-9])([0-9]{2})([2-9])([0-9]{2})([0-9]{4}))$">
-                </div>
-                <div class="form-group">
-                  <label for="emailInput">Email address</label>
-                  <input id="emailInput" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-                </div> -->
                 <div class="form-group">
                   <label for="Ceterory" class="col-form-label">Category:</label>
                   <select class="form-control" name="" id="Category">
-                    <option value="">Space</option>
-                    <option value="">Household</option>
-                    <option value="">Sporting Equipment</option>
-                    <option value="">Outdoor Misc</option>
+                    <option value="1">Space</option>
+                    <option value="2">Household</option>
+                    <option value="3">Sporting Equipment</option>
+                    <option value="4">Outdoor Misc</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -64,21 +58,13 @@
                   <input type="text" class="form-control" id="Items-name">
                   <label for="Items-description" class="col-form-label">Description:</label>
                   <input type="text" class="form-control" id="Items-description">
-                  <label for="Items-photo" class="col-form-label">Photo:</label>
-                  <input type="url" class="form-control" id="items-photo">
+                  <label for="Items-photo" class="col-form-label">Photo url:</label>
+                  <input type="url" class="form-control" id="Items-photo">
                 </div>
-                <!-- <div class="form-group">
-                  <label for="itemImage">Choose Item Image</label>
-                  <input type="file" class="form-control-file" id="itemImage" aria-describedby="fileHelp" accept=".jpg, .jpeg, .png">
-                  <small id="fileHelp" class="form-text text-muted"></small>
-                  <div>
-                    <button type="button" name="button">Upload</button>
-                  </div>
-                </div>
-              </div> -->
+              </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Share</button>
+                <button id="share-button" type="button" class="btn btn-primary">Share</button>
               </div>
             </div>
           </div>
@@ -156,12 +142,5 @@
       </div>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="posts.js " charset="utf-8"></script>
-    <script src="item.js" charset="utf-8"></script>
   </body>
 </html>
