@@ -26,10 +26,12 @@ $(document).ready(() => {
       });
   });
 
+
   $('#modal').on('hidden.bs.modal', () => {
     location.reload();
   });
 
+  
   // Make a GET request for the item
   axios.get(`${baseUrl}/items/${item}`)
     .then(response => {

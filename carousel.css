@@ -16,11 +16,13 @@ body {
 }
 
 h1 {
-  color: crimson;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-p {
-  color: lightcyan;
+.subtitle {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Declare heights because of positioning of img element */
