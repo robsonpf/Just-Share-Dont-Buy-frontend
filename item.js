@@ -6,9 +6,7 @@ let item = $.url('?item');
 // When the page loads
 $(document).ready(() => {
   // Make a GET request for the item
-
   axios.get(`${baseUrl}/items/${item}`)
-
     .then(response => {
       const item = response.data
       $('#item-title').html(item.name)
@@ -30,18 +28,15 @@ $(document).ready(() => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById("reservation_button").addEventListener('click', (event) => {
-
-    // $('.alert').alert()
-
+  document.getElementById("book").addEventListener('click', (event) => {
     axios.patch(`${baseUrl}/items/${item}`, {
-        "reserved": true
-      })
-      .then(result => {
-        console.log(result);
-      })
-      .catch(error => {
-        console.log(error);
-      })
+      "reserved": true
+    })
+    .then(result => {
+      console.log(result);
+    })
+    .catch(error => {
+      console.log(error);
+    })
   })
 })
