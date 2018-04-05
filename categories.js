@@ -13,13 +13,11 @@ getUrlVars = () => {
 }
 
 let category = getUrlVars()["category"];
-console.log('what is this === ', category)
 $(document).ready(() => {
 
   axios.get(`${baseUrl}/categories/${category}`)
 
     .then(response => {
-      console.log('hello');
       const category = response.data
       $('#category-title').html(category.name)
     })
@@ -31,11 +29,8 @@ $(document).ready(() => {
   axios.get(`${baseUrl}/categories/${category}/items`)
 
     .then(response => {
-      console.log(response);
       const items = response.data;
       items.forEach(item => {
-        console.log('item ===== ', item);
-        console.log(window.location.href);
         let url = window.location.href.split("/category.html?")[0]
         if (!item.reserved) {
           $('.card-deck').append(`

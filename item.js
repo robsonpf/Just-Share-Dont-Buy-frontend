@@ -10,7 +10,6 @@ $(document).ready(() => {
   axios.get(`${baseUrl}/items/${item}`)
 
     .then(response => {
-      console.log(response);
       const item = response.data
       $('#item-title').html(item.name)
       $('#item-description').html(item.description)
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // $('.alert').alert()
 
     axios.patch(`${baseUrl}/items/${item}`, {
-    
         "reserved": true
       })
       .then(result => {
