@@ -1,22 +1,7 @@
-var baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
+const baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
-getUrlVars = () => {
-  let vars = [],
-    hash;
-  let hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  hashes.forEach((hash, idx) => {
-    hash = hashes[idx].split('=');
-    vars.push(hash[0]);
-    vars[hash[0]] = hash[1];
-  })
-  return vars;
-}
-
-let category = getUrlVars()["category"];
-$(document).ready(() => {
-
+export const getCategory = (category) => {
   axios.get(`${baseUrl}/categories/${category}`)
-
     .then(response => {
       const category = response.data
       $('#category-title').html(category.name)
@@ -24,10 +9,10 @@ $(document).ready(() => {
     .catch(error => {
       console.log(error);
     });
+};
 
-
+export const getItemsByCategory = (category) => {
   axios.get(`${baseUrl}/categories/${category}/items`)
-
     .then(response => {
       const items = response.data;
       items.forEach(item => {
@@ -57,4 +42,4 @@ $(document).ready(() => {
     .catch(error => {
       console.log(error);
     });
-});
+};
