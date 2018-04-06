@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("result ==>", result);
       const { access_token } = result.data;
       localStorage.setItem('jwtToken', access_token);
-      // location.assign("index.html")
+      location.assign("index.html")
     })
     .catch(err => {
       console.log(err.response);
