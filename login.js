@@ -11,8 +11,9 @@ document.querySelector("#logIn-button").addEventListener("click", (event) => {
   })
   .then(result => {
     console.log("result ==>", result);
-    const { access_token } = result.data;
+    const { access_token, username } = result.data;
     localStorage.setItem('jwtToken', access_token);
+    localStorage.setItem('username', username);
     location.assign("index.html")
   })
   .catch(err => {

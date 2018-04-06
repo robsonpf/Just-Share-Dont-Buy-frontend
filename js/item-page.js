@@ -1,10 +1,11 @@
 import { bookItem, unbookItem, newItem, getItem } from './app/item.js';
 
-if (localStorage.getItem('jwtToken')) {
-  axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwtToken');
-}
-
 $(document).ready(() => {
+  if (localStorage.getItem('jwtToken') && localStorage.getItem('username')) {
+    const username = localStorage.getItem('username');
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('jwtToken');
+    $('#navbar-welcome').html(`Welcome, ${username}`)
+  }
   const item = url('?item');
 
   $('#book').click(event => bookItem(item));
