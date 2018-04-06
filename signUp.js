@@ -1,5 +1,4 @@
-var baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
-var baseURL = `http://localhost:3000/signup`;
+var baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("signUp").addEventListener("click", (event) => {
@@ -9,19 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const signUpEmail = document.querySelector("#signUpEmail")
     const signUpPassword = document.querySelector("#signUp-Password")
 
-
-
-    axios.post(`${baseUrl}/signup`, {
+    axios.post(`${baseUrl}/users`, {
       "name": userNameId.value,
       "phone": phoneNumber.value,
       "email": signUpEmail.value,
       "password": signUpPassword.value
     })
-
     .then(result => {
       console.log("result ==>", result);
-      localStorage.setItem("token", JSON.stringify(token));
-
+      const { access_token } = result.data;
+      localStorage.setItem('jwtToken', access_token);
       location.assign("index.html")
     })
     .catch(err => {

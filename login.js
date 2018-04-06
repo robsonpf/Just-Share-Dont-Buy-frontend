@@ -1,4 +1,4 @@
-var baseUrl = `https://just-share-dont-buy-backend.herokuapp.com`;
+var baseUrl = localStorage.getItem('baseUrl') || `https://just-share-dont-buy-backend.herokuapp.com`;
 
 document.querySelector("#logIn-button").addEventListener("click", (event) => {
   event.preventDefault()
@@ -11,8 +11,8 @@ document.querySelector("#logIn-button").addEventListener("click", (event) => {
   })
   .then(result => {
     console.log("result ==>", result);
-    localStorage.setItem(JSON.stringify(token));
-
+    const { access_token } = result.data;
+    localStorage.setItem('jwtToken', access_token);
     location.assign("index.html")
   })
   .catch(err => {
