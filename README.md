@@ -19,8 +19,10 @@
     
 ## How to Use
 * SignUp/Login:
+    * This current version, you are only able to view the items available after you SIGN UP and LOGIN. (A log out button is in       development)
     * Use the appropriate buttons on the landing page in the top right and complete the forms with the requested information.
 * Search and reserve item:
+    * Log out button.
     * Select which category you wish to search.
     * Click on item to reserve.
     * Click "Book" and a confirmation of reservation will populate to validate to booking.
