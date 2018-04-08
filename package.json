@@ -1,0 +1,25 @@
+{
+  "name": "just-share-dont-buy-frontend",
+  "version": "1.0.0",
+  "description": "The main purpose for Just Share, Don't Buy is to allow downtown residents the ability to share items with their neighbors that are rarely used and difficult to store. These items could include a step ladder, carpet cleaner, tennis racquet, or event space such as a backyard patio and/or conference room.",
+  "main": "index.js",
+  "scripts": {
+    "mocha": "mocha",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robsonpf/Just-Share-Dont-Buy-frontend.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robsonpf/Just-Share-Dont-Buy-frontend/issues"
+  },
+  "homepage": "https://github.com/robsonpf/Just-Share-Dont-Buy-frontend#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "moxios": "^0.4.0"
+  }
+}
