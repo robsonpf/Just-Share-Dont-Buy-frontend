@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     .then(result => {
       console.log("result ==>", result);
-      localStorage.setItem("token", JSON.stringify(token));
+      localStorage.setItem("token", JSON.stringify(result));
 
       location.assign("index.html")
     })
