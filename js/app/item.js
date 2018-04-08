@@ -78,6 +78,8 @@ export const newItem = () => {
   document.location = $('#category-title').html(category.name);
 };
 
+// export const deleteItem = ()
+
 const validateItemForm = () => {
   const itemName = document.querySelector("#Items-name").value
   const description = document.querySelector("#Items-description").value
