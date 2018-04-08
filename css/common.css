@@ -152,6 +152,10 @@ a.btn:active {
   }
 }
 
+#navbar-welcome {
+  color: white;
+}
+
 /* #bgImg1 {
   background-image: url("http://guigaoliveira.me/wp-content/uploads/2018/03/bold-and-modern-target-living-room-furniture-table-at.jpg");
   background-repeat: no-repeat;
