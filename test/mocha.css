@@ -4,6 +4,11 @@ body {
   margin:0;
 }
 
+h1 {
+  font: 40px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 30px 0px 0px 60px;
+}
+
 #mocha {
   font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 60px 50px;
