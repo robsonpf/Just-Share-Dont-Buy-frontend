@@ -36,4 +36,4 @@
 * Robson Farias https://github.com/robsonpf
 * Jon Riemer https://github.com/jriemer47
 * Sophie Ngo https://github.com/FunCodingPanda
-* Randy Carlisle https://github.com/rsc2014
+* Randy Carlisle https://github.com/rscarlisle
