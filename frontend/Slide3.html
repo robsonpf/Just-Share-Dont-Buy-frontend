@@ -1,0 +1,303 @@
+<html>
+  <head>
+    <title>Slide 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.2/url.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/category-page.js" type="module"></script>
+
+    <script type="text/javascript">
+      function saveEditsProjectSlide3() {
+        let editElem = document.getElementById("slide3_project");
+        let userVersion = editElem.innerHTML;
+        localStorage.userEdits = userVersion;
+      }
+
+      function slide3ProjectEdits() {
+        if(localStorage.userEdits != null) {
+          document.getElementById("slide3_project").innerHTML = localStorage.userEdits;
+        }
+      }
+
+      // function editProject() {
+      //   let editElem = document.getElementById("editProjet");
+      //   let userVersion = editElem.innerHTML;
+      //   localStorage.userEdits = userVersion;
+      // }
+      //
+      //
+      // function checkEdits() {
+      //   if(localStorage.userEdits != null) {
+      //     document.getElementById("edit").innerHTML = localStorage.userEdits;
+      //   }
+      // }
+
+
+    </script>
+
+    <style>
+      div.relative {
+        position: relative;
+        width: 550px;
+        height: 600px;
+        border: 2px solid black;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .editProjetDay {
+        background-color: #E20074;
+        color: white; margin: auto;
+        font: x-small
+      }
+
+      div.rela {
+        position: relative;
+        width: 400px;
+        height: 600px;
+        border: 2px solid black;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: 3px solid #73AD21;
+      }
+
+      .pt {
+        width: 150;
+        height: 80;
+      }
+
+      .verticalTableHeader {
+        text-align:center;
+        white-space:nowrap;
+        g-origin:50% 50%;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      .verticalTableHeader p {
+          margin:0 -100% ;
+          display:inline-block;
+      }
+      .verticalTableHeader p:before{
+          content:'';
+          width:0;
+          padding-top:110%;/* takes width as reference, + 10% for faking some extra padding */
+          display:inline-block;
+          vertical-align:middle;
+      }
+
+
+      </style>
+
+
+
+
+  </head>
+
+
+
+  <body onload="slide3ProjectEdits()">
+
+    <nav class="navbar navbar-expand-lg share-navbar">
+      <img class="logo" src="TMO_LOGO.PNG">
+      <div class="collapse navbar-collapse" id="navbarNav"> </div>
+
+      <div>
+        <input class="btn btn-secondary dropdown-toggle"  type="button" style="margin-right: 10px;" value="save my edits" onclick="saveEdits()"/>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Slides
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button"><a class="a-tag" href="index.html?index">  Slide 1</a></button>
+          <button class="dropdown-item" type="button"><a class="a-tag" href="Slide2.html?Slide2"> Slide 2</a> </button>
+          <button class="dropdown-item" type="button"><a class="a-tag" href="Slide3.html?Slide3"> Slide 3 </a> </button>
+          <button class="dropdown-item" type="button"><a class="a-tag" href="Slide4.html?Slide4"></a> Slide 4 </button>
+          <button class="dropdown-item" type="button"><a class="a-tag" href="Slide5.html?Slide5"></a> Slide 5</button>
+          <button class="dropdown-item" type="button">Slide 7</button>
+          <button class="dropdown-item" type="button">Slide 8</button>
+          <button class="dropdown-item" type="button">Slide 9</button>
+          <button class="dropdown-item" type="button">Slide 10</button>
+          <button class="dropdown-item" type="button">Slide 11</button>
+          <button class="dropdown-item" type="button">Slide 12</button>
+          <button class="dropdown-item" type="button">Slide 13</button>
+          <button class="dropdown-item" type="button">Slide 14</button>
+          <button class="dropdown-item" type="button">Slide 15</button>
+          <button class="dropdown-item" type="button">Slide 16</button>
+          <button class="dropdown-item" type="button">Slide 17</button>
+          <button class="dropdown-item" type="button">Slide 18</button>
+        </div>
+      </div>
+      </div>
+      <span id="navbar-welcome"></span>
+    </nav>
+
+    <div>
+      <header>
+        <div class="row">
+          <h1 style="color: #E20074; margin-right: 200px;">Performance Engineering Status</h1>
+          <h3 ><small class="editProjetDay"  id="editProjetDay" contenteditable="true">Update as of 05/29/2020 5:30 AM PST</small></h3>
+          <img class="pt" src="PR&T.PNG" >
+        </div>
+      </header>
+
+      <div class="row" >
+
+        <div class="relative">
+          <h3 id="editMonthRelease3" contenteditable="true" style="background-color: #E20074; color: white; text-align: center; border: 2px solid;">July Release</h3>
+
+          <p ><b>Key Callouts: </b></p>
+          <br>
+          <div id="slide3_project" contenteditable="true">
+
+          </div>
+
+
+          <!-- <ul>
+            <li id="editProject" contenteditable="true" ><b>P&T_PO_32 Boost XP</b> is reporting Trending  <b style="color: GREEN">Green </b><b> (Test complete: 6/01; Release: 6/11)</b> )</li>
+              <ul>
+                <li id="edit" contenteditable="true" >Two rounds of Peak load tests completed </li>
+                <li id="edit" contenteditable="true" >Endurance test completed on 5/28. Results are being collated </li>
+              </ul>
+            <li id="edit" contenteditable="true" ><b>P&T_FO_DEV_01 (Device Subsidy Lite)</b> reporting <b style="color: blue;">Blue</b><b>(Release date– 05/16)</b></li>
+              <ul>
+                <li id="edit" contenteditable="true" >Peak Load Test – Completed </li>
+                <li id="edit" contenteditable="true" >Stress Test – Completed</li>
+                <li id="edit" contenteditable="true" >Endurance – Completed</li>
+                <li id="edit" contenteditable="true" >All TCs updated to pass status; exit report publishedAll TCs updated to pass status; exit report published</li>
+              </ul>
+          </ul> -->
+        <footer style="vertical-align:bottom">
+          <input class="btn btn-secondary dropdown-toggle"  type="button" style="margin-botton: 10px;" value="save project status edits of slide 3" onclick="saveEditsProjectSlide3()"/>
+        </footer>
+
+        </div>
+
+        <div class="rela" >
+
+          <table class="table" style="text-align:center; table-layout :fixed;">
+            <thead class="thead-light" >
+              <tr>
+                <th scope="col" style="background-color: #E20074; color: white;" >Project</th>
+                <th scope="col" style="background-color: #E20074; color: white;" class="verticalTableHeader">Planning</th>
+                <th scope="col" style="background-color: #E20074; color: white;" class="verticalTableHeader">Design</th>
+                <th scope="col" style="background-color: #E20074; color: white;" class="verticalTableHeader">Develop</th>
+                <th scope="col" style="background-color: #E20074; color: white;" class="verticalTableHeader">Execution</th>
+                <th scope="col" style="background-color: #E20074; color: white;" class="verticalTableHeader">Comp%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="text-align: center;">
+                <th scope="row" style="background-color: #E20074; color: white;">P&T_FO_SAL_05 - Store Locator Web to Store - DOMAIN</th>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0%</td>
+              </tr>
+              <tr style="text-align: center;">
+                <th scope="row" style="background-color: #E20074; color: white;">P&T_BO_BAC_05 - Identity Management</th>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>41%</td>
+              </tr>
+              <tr style="text-align: center;">
+                <th scope="row" style="background-color: #E20074; color: white;">P&T_PO_32 (Boost XP – Consumer Sales Portal)</th>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>94%</td>
+              </tr>
+              <tr style="text-align: center;">
+                <th scope="row" style="background-color: #E20074; color: white;">P&T_SAL_01 </th>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rela" >
+          <h3 id="edit" contenteditable="true" style="background-color: #E20074; color: white; text-align: center; border: 2px solid;">Future release Readiness</h3>
+          <table class="table">
+            <thead class="thead-light" >
+              <tr>
+                <th scope="col" style="background-color: red; color: white;">Red Projects – 0</th>
+                <th scope="col" style="background-color: yellow; color: black;">Yellow Projects – 1</th>
+                <th scope="col" style="background-color: GREEN; color: white;">Green Projects – 0</th>
+                <th scope="col" style="background-color: BLUE; color: white;">Test Complete – 1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" rowspan="4" colspan="2">Total Projects in Scope 2</th>
+                <td>Planning </td>
+                <td style="text-align: center;">0</td>
+              </tr>
+              <tr>
+                <td>Design </td>
+                <td style="text-align: center;">0</td>
+              </tr>
+              <tr>
+                <td>Develop</td>
+                <td style="text-align: center;">0</td>
+              </tr>
+              <tr>
+                <td>Execution</td>
+                <td style="text-align: center;">1</td>
+              </tr>
+
+              <tr>
+                <th scope="row" colspan="2">Number of application in the scope</th>
+                <td style="text-align: center;" colspan="2">7</td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">Number of PE script</th>
+                <td style="text-align: center;" colspan="2">17</td>
+              </tr>
+              <tr>
+                <th colspan="2">Number of defect open</th>
+                <td style="text-align: center;" colspan="2">0</td>
+              </tr>
+              <tr>
+                <th colspan="2">Deferred Defects with Conditional Sign Off</th>
+                <td style="text-align: center;" colspan="2">0</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+
+        </div>
+      </div>
+    </div>
+    <script src="login.js" charset="utf-8"></script>
+    <script src="signUp.js" charset="utf-8"></script>
+  </body>
+</html>

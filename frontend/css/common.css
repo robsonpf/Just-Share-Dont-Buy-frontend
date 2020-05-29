@@ -1,0 +1,175 @@
+.site-container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 20px 20px;
+  margin-top: 20px;
+}
+
+.row {
+  padding: 20px 20px;
+  margin: 10px !important;
+}
+
+h1.inner-text {
+  text-align: center;
+  font-size: 60px;
+  margin: 30px auto;
+}
+
+h3 {
+  color: blue;
+}
+
+.share-pic {
+  text-align: center;
+}
+
+.nobuy-pic {
+  margin: 10px auto;
+  max-width: 80%;
+}
+
+.inner-text {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 55px;
+  color: white;
+  border: 1px white;
+  background: #e22b72;
+}
+
+.share-navbar {
+  background-color: #5d1a46;
+}
+
+.information {
+  font-size: 30px;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.button {
+  background-color: #5d1a46;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+  width: 200px;
+  height: 125px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.a-tag {
+  color: white;
+  font-weight: 500;
+}
+
+.a-tag:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.a-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  background: skyblue;
+}
+
+#category-title {
+  padding: 25px;
+}
+
+.category-item-card {
+  min-width: 18rem;
+  max-width: 18rem;
+}
+
+a.btn {
+  appearance: button;
+  background-color: white;
+  border: 1px solid black;
+  color: initial;
+  margin: 1px;
+  padding: 20px;
+  text-decoration: none;
+  width: 100%;
+  white-space: normal;
+}
+
+a.btn:hover {
+  background-color: lightskyblue;
+}
+
+a.btn:active {
+  background-color: lightblue;
+}
+
+#availability {
+  margin-left: 200px;
+  border: 1px solid black;
+  padding: 6px;
+}
+
+.logo {
+  color: white;
+  text-shadow: 1px 2px dodgerblue;
+  font-size: 5px;
+  margin-top: -84px;
+  margin-bottom: -80px;
+}
+
+.category-boxes {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#date {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (min-width: 54rem) {
+  .category-boxes {
+    flex-direction: row;
+  }
+
+  .button {
+    margin: 0px;
+  }
+}
+
+#navbar-welcome {
+  color: white;
+}
+
+/* #bgImg1 {
+  background-image: url("http://guigaoliveira.me/wp-content/uploads/2018/03/bold-and-modern-target-living-room-furniture-table-at.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%
+} */
+
+/* #bgImg2 {
+  background-image: url("https://secure.meetupstatic.com/photos/event/b/4/a/8/highres_439726248.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%
+} */
+
+/* #bgImg3 {
+
+} */
